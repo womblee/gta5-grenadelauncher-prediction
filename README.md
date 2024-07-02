@@ -1,9 +1,9 @@
 # Grenade Launcher Prediction (GTA 5)
 Prediction concept for the grenade launcher, written for 2Take1 in Lua
 
-# WIP
-A lot of work has to be made to make it better (especially implement horizontal aiming)
-also the prediction needs to be improved a little bit and overall quality of life
+# Known issues
+Medium distances work badly,
+Horizontal helper does not work
 
 # How it works
 It uses sample data:
