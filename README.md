@@ -1,5 +1,9 @@
-# Grenade Launcher Prediction (GTA5)
+# Grenade Launcher Prediction (GTA 5)
 Prediction concept for the grenade launcher, written for 2Take1 in Lua
+
+# WIP
+A lot of work has to be made to make it better (especially implement horizontal aiming)
+also the prediction needs to be improved a little bit and overall quality of life
 
 # How it works
 It uses sample data:
@@ -32,3 +36,6 @@ print("Predicted flight time: " .. flight_time .. " seconds")
 native.call(0x103991D4A307D472, heading_diff) -- SET_FIRST_PERSON_SHOOTER_CAMERA_HEADING
 ```
 150 is the maximum distance a grenade can fly, and 75 is the maximum pitch.
+
+# How can I use it
+This script was specifically writen for 2Take1Menu, but you can rewrite it in C++ for your own purposes.
