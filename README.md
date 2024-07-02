@@ -4,6 +4,8 @@ Prediction concept for the grenade launcher, written for 2Take1 in Lua
 # Known issues
 - Medium distances work badly
 
+[![Prediction Testing](https://img.youtube.com/vi/0-jgVNdtUds/0.jpg)](https://www.youtube.com/watch?v=0-jgVNdtUds)
+
 # How it works
 It uses sample data:
 ```lua
