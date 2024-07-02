@@ -1,5 +1,5 @@
 menu.add_feature("Grenade Trajectory Prediction", "toggle", 0, function(f)
-    local GL_MAX_DISTANCE = 150 -- Maximum tested distance of the grenade landing
+    local GL_MAX_DISTANCE = 148 -- Maximum tested distance of the grenade landing
     local GRAVITY = 9.81        -- Gravity, might need adjustment
     
     local function atan2(y, x)
@@ -92,16 +92,16 @@ menu.add_feature("Grenade Trajectory Prediction", "toggle", 0, function(f)
                 -- Personal coords
                 local my_coords = player.get_player_coords(player.player_id())
 
-                -- Find closest enemy
+                -- Find closest enemy within 150m radius
                 local min_distance = math.huge
                 local closest_enemy = -1
-
+                
                 for pid = 0, 31 do
                     if player.is_player_valid(pid) and pid ~= player.player_id() then
                         local coords = player.get_player_coords(pid)
                         local distance = get_distance(my_coords, coords)
-
-                        if distance < min_distance then
+                
+                        if distance <= GL_MAX_DISTANCE and distance < min_distance then
                             min_distance = distance
                             closest_enemy = pid
                         end
