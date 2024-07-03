@@ -35,6 +35,10 @@ print("Predicted flight time: " .. flight_time .. " seconds")
 ```lua
 -- Apply the smooth heading adjustment
 native.call(0x103991D4A307D472, heading_diff) -- SET_FIRST_PERSON_SHOOTER_CAMERA_HEADING
+
+if pitch_angle ~= nil then
+    native.call(0x759E13EBC1C15C5A, pitch_angle) -- SET_FIRST_PERSON_SHOOTER_CAMERA_PITCH
+end
 ```
 150 is the maximum distance a grenade can fly, and 75 is the maximum pitch.
 
